@@ -31,7 +31,7 @@ int main(){
 			printf("Error!!! Dividing by zero");
 		}
 		else{
-			printf("%.1f * %.1f = %.1f",x,y,x/y);
+			printf("%.1f / %.1f = %.1f",x,y,x/y);
 		}
 		break;
 	default:
