@@ -11,12 +11,6 @@
 
 #define PI 3.14159
 
-struct Sstudent{
-	char name[20];
-	int roll;
-	float marks;
-};
-
 int main(){
 	int r;
 	printf("Enter the radius: ");
