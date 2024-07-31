@@ -1,0 +1,24 @@
+Symbols for the  app.o:
+00000000 T main
+00000000 D str
+         U uart_send_string
+
+Symbols for the uart.o:
+00000000 T uart_send_string
+
+Symbols for the startup.o:
+         U main
+00000000 T reset
+         U stack_top
+00000008 t stop
+
+Symbols after using linker script:
+00010010 T main
+00010000 T reset
+000110dc D stack_top
+00010008 t stop
+00010078 D str
+00010028 T uart_send_string
+
+
+Note that there is no '.map' extension on my pc so it is not included in the repo.
