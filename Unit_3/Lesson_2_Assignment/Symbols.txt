@@ -19,6 +19,3 @@ Symbols after using linker script:
 00010008 t stop
 00010078 D str
 00010028 T uart_send_string
-
-
-Note that there is no '.map' extension on my pc so it is not included in the repo.
