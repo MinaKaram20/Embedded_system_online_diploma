@@ -20,7 +20,7 @@ SECTIONS{
     }> sram AT> flash
     .bss : {
         _S_BSS = .;
-        *(.bss)
+        *(.bss*)
         _E_BSS = .;
     }>sram
 }
