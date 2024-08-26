@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffffb90000000c000000c7060000f0030000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffffb90000000c000000c7060000f0030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -15,7 +15,7 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="555" x="994" flags="00000033" y="200" h="175" pid="1" iid="-1">
+   <POPUP w="504" x="1280" flags="00008033" y="283" h="150" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">99</ITEM>
      <ITEM name="AutoResize">No</ITEM>
@@ -336,7 +336,7 @@
      <ITEM name="TopLineAddress">E000E000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="583" x="6" flags="0000802b" y="134" h="666" pid="100" iid="1">
+   <POPUP w="583" x="6" flags="0000002b" y="134" h="666" pid="100" iid="1">
     <PROPERTIES>
      <ITEM name="Breakpoint 0">"main",80000F0,0003,9FB6,8D5E,1
 </ITEM>
