@@ -271,7 +271,7 @@ void del_s(){
 				st[j]=st[j+1];//push all data to take the empty space
 			}
 			my_queue.count--;//remove one element
-			my_queue.last=&st[my_queue.count];
+			my_queue.last=&st[my_queue.count];//make the last pointer of the queue to look to the next element will be pushed
 			found=1;
 			break;
 		}
