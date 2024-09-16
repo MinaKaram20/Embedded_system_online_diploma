@@ -1,0 +1,29 @@
+/*
+ * main.c
+ *
+ *  Created on: 16 Sept 2024
+ *      Author: minak
+ */
+
+#include "MemMap.h"
+#include "Utils.h"
+#include <util/delay.h>
+
+int main(void){
+	DDRD=0b11111000;
+	while(1){
+		if(ReadBit(PIND,0)==1){
+			SetBit(PORTD,5);
+			_delay_ms(1000);
+			SetBit(PORTD,6);
+			_delay_ms(1000);
+			SetBit(PORTD,7);
+			_delay_ms(1000);
+			ClearBit(PORTD,7);
+			_delay_ms(1000);
+			ClearBit(PORTD,6);
+			_delay_ms(1000);
+			ClearBit(PORTD,5);
+		}
+	}
+}

@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: 16 Sept 2024
+ *      Author: minak
+ */
+
+#include "MemMap.h"
+#include "Utils.h"
+#include <util/delay.h>
+
+void GPIO_Init(void){
+	ClearBit()
+}
+
+int main(void){
+
+}
