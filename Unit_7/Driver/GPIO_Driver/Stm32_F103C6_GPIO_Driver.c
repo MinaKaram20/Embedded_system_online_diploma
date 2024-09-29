@@ -206,7 +206,7 @@ void MCAL_GPIO_WritePin(GPIO_TypeDef * GPIOx,uint16_t PIN_Number,uint8_t value){
  * @retval 			-none
  * Note				-
  */
-void MCAL_GPIO_WritePort(GPIO_TypeDef * GPIOx,uint8_t value){
+void MCAL_GPIO_WritePort(GPIO_TypeDef * GPIOx,uint16_t value){
 	GPIOx->ODR = (uint32_t)value;
 }
 
