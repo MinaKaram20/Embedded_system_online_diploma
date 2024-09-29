@@ -207,14 +207,7 @@ void MCAL_GPIO_WritePin(GPIO_TypeDef * GPIOx,uint16_t PIN_Number,uint8_t value){
  * Note				-
  */
 void MCAL_GPIO_WritePort(GPIO_TypeDef * GPIOx,uint8_t value){
-	if(value == GPIO_PIN_SET)
-	{
-		GPIOx->ODR |= GPIO_ALL_PINS;
-	}
-	else if(value == GPIO_PIN_RESET)
-	{
-		GPIOx->ODR &= ~(GPIO_ALL_PINS);
-	}
+	GPIOx->ODR = (uint32_t)value;
 }
 
 /**================================================================
