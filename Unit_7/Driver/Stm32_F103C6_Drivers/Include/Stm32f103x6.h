@@ -30,6 +30,18 @@
 
 #define Cortex_M3_INTERNAL_PERIPHERALS_MEMORY_BASE	0xE0000000UL
 
+#define NVIC_BASE									0xE000E100UL
+
+#define NVIC_ISER0									*(volatile uint32_t *)(NVIC_BASE + 0x000)
+#define NVIC_ISER1									*(volatile uint32_t *)(NVIC_BASE + 0x004)
+#define NVIC_ISER2									*(volatile uint32_t *)(NVIC_BASE + 0x008)
+
+#define NVIC_ICER0									*(volatile uint32_t *)(NVIC_BASE + 0x080)
+#define NVIC_ICER1									*(volatile uint32_t *)(NVIC_BASE + 0x084)
+#define NVIC_ICER2									*(volatile uint32_t *)(NVIC_BASE + 0x088)
+
+
+
 //======================================================================
 
 //-----------------------------
@@ -116,10 +128,7 @@ typedef struct{
 typedef struct{
 	volatile uint32_t EVCR;
 	volatile uint32_t MAPR;
-	volatile uint32_t EXTICR1;
-	volatile uint32_t EXTICR2;
-	volatile uint32_t EXTICR3;
-	volatile uint32_t EXTICR4;
+	volatile uint32_t EXTICR[4];
 	volatile uint32_t RESERVED_1;
 	volatile uint32_t MAPR2;
 }AFIO_TypeDef;
@@ -165,6 +174,25 @@ typedef struct{
 #define RCC_GPIOC_CLK_EN()		(RCC->APB2ENR |= 1<<4)
 #define RCC_GPIOD_CLK_EN()		(RCC->APB2ENR |= 1<<5)
 #define RCC_GPIOE_CLK_EN()		(RCC->APB2ENR |= 1<<6)
+#define RCC_AFIO_CLK_EN()		(RCC->APB2ENR |= 1<<0)
+
+//==========================================================
+
+#define NVIC_IRQ6_EXTI0_Enable			(NVIC_ISER0 |= 1<<6)
+#define NVIC_IRQ7_EXTI1_Enable			(NVIC_ISER0 |= 1<<7)
+#define NVIC_IRQ8_EXTI2_Enable			(NVIC_ISER0 |= 1<<8)
+#define NVIC_IRQ9_EXTI3_Enable			(NVIC_ISER0 |= 1<<9)
+#define NVIC_IRQ10_EXTI4_Enable			(NVIC_ISER0 |= 1<<10)
+#define NVIC_IRQ23_EXTI5_9_Enable		(NVIC_ISER0 |= 1<<23)
+#define NVIC_IRQ40_EXTI10_15_Enable		(NVIC_ISER1 |= 1<<8)
+
+#define NVIC_IRQ6_EXTI0_Disable			(NVIC_ICER0 &= ~(1<<6))
+#define NVIC_IRQ7_EXTI1_Disable			(NVIC_ICER0 &= ~(1<<7))
+#define NVIC_IRQ8_EXTI2_Disable			(NVIC_ICER0 &= ~(1<<8))
+#define NVIC_IRQ9_EXTI3_Disable			(NVIC_ICER0 &= ~(1<<9))
+#define NVIC_IRQ10_EXTI4_Disable		(NVIC_ICER0 &= ~(1<<10))
+#define NVIC_IRQ23_EXTI5_9_Disable		(NVIC_ICER0 &= ~(1<<23))
+#define NVIC_IRQ40_EXTI10_15_Disable	(NVIC_ICER1 &= ~(1<<8))
 
 //==============================================================
 
